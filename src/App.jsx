@@ -2,15 +2,16 @@ import { useState } from "react";
 
 function App() {
   // states
-  const tableau = useState("Rod");
-  console.log(tableau);
+  const [prenom, setPrenom] = useState("Rod");
+
   // comportements
 
   // affichage
 
   return (
-    <div className="App">
-      <h1>Hello Rod</h1>
+    <div>
+      <h1> Bienvue chez nous {prenom}</h1>
+      <h3> Connectez-vous</h3>
     </div>
   );
 }
