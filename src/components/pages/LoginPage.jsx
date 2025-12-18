@@ -1,4 +1,3 @@
-import React from 'react'
 import React, { useState } from 'react'
 
 
@@ -9,7 +8,7 @@ export default function LoginPage() {
   // comportements
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Bienvenu ${prenom}`);
+    alert(`Bienvenue ${prenom}`);
     // Réinitialiser le formulaire si nécessaire
     setPrenom("");
   };
@@ -19,11 +18,11 @@ export default function LoginPage() {
     <div>
       <h1>Hello {prenom}</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form action="submit" onSubmit={handleSubmit}>
         <h2>Formulaire de contact</h2>
         <input
           type="text"
-          placeholder="Entrez votre Prénom"
+          placeholder="Entrez votre Prénom..."
           value={prenom}
           onChange={(e) => setPrenom(e.target.value)}
           required
@@ -32,7 +31,7 @@ export default function LoginPage() {
       </form>
 
       <br />
-      <h3>Connectez-vous</h3>
+      <h3>Accéder à votre espace</h3>
     </div>
   );
 }
