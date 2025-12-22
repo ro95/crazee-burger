@@ -1,17 +1,9 @@
-import { useState } from "react";
+import LoginPage from "./components/pages/login/LoginPage";
 
 function App() {
-  // states
-  const tableau = useState("Rod");
-  console.log(tableau);
-  // comportements
 
-  // affichage
+  return <LoginPage/>
 
-  return (
-    <div className="App">
-      <h1>Hello Rod</h1>
-    </div>
-  );
 }
+
 export default App;
