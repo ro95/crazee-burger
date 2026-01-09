@@ -29,7 +29,6 @@ export default function LoginForm() {
         required
       />
       <button type="submit">Accéder à votre espace</button>
-   
     </form>
   );
 }
