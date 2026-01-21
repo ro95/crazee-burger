@@ -35,11 +35,8 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-h1 {
-  font-family: ${theme.fonts.family.heading};
-  font-size: ${theme.fonts.size.P5};
-}
-
-
-
-`
+  h1 {
+    font-family: ${theme.fonts.family.heading};
+    font-size: ${theme.fonts.size.P5};
+  }
+`;

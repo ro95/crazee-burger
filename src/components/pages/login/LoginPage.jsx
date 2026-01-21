@@ -1,9 +1,23 @@
-import LoginForm from "./LoginForm"
+import styled from "styled-components";
+import LoginForm from "./LoginForm";
 
 export default function LoginPage() {
-  
+
   // affichage
   return (
-    <LoginForm />
-  )
+    <LoginPageStyled>
+      <LoginForm />
+    </LoginPageStyled>
+  );
 }
+
+const LoginPageStyled = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/assets/img/f03-burger-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
