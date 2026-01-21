@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components"; 
+import styled from "styled-components";
+import { theme } from "../../../index"; 
 
 export default function LoginForm() {
   // states
@@ -34,5 +35,11 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-border: 1px solid red;
+h1 {
+  font-family: ${theme.fonts.family.heading};
+  font-size: ${theme.fonts.size.P5};
+}
+
+
+
 `

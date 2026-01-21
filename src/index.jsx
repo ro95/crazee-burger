@@ -29,16 +29,22 @@ const spacing = {
 };
 
 const fonts = {
-  XXXS: "8px",
-  XXS: "10px",
-  XS: "12px",
-  P0: "15px",
-  P1: "18px",
-  P2: "20px",
-  P3: "24px",
-  P4: "36px",
-  P5: "48px",
-  P6: "60px",
+  family: {
+    heading: "'Amatic SC', cursive",
+    body: "'Open Sans', sans-serif",
+  },
+  size: {
+    XXXS: "8px",
+    XXS: "10px",
+    XS: "12px",
+    P0: "15px",
+    P1: "18px",
+    P2: "20px",
+    P3: "24px",
+    P4: "36px",
+    P5: "48px",
+    P6: "60px",
+  },
 };
 const gridUnit = 8;
 const borderRadius = {
