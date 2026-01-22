@@ -27,7 +27,7 @@ export default function LoginForm() {
           CRAZEE{" "}
           <img
             className="logo-burger"
-            src="./src/assets/img/f03-logo-orange.png"
+            src="/images/f03-logo-orange.png"
             alt="logo orange burger"
           />{" "}
           BURGER
