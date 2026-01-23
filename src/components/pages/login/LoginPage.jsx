@@ -16,7 +16,7 @@ const LoginPageStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/src/assets/img/f03-burger-background.jpg");
+  background-image: url("/images/f03-burger-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
