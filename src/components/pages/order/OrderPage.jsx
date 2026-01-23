@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Navbar from "src/components/layout/Navbar";
 
 export default function OrderPage() {
   // states
@@ -7,10 +8,12 @@ export default function OrderPage() {
 
 
 return (
-    <div>
+  <div>
+    <Navbar>
       <h1>Bonjour {prenom} </h1>
-  
+
       <Link to="/">Déconnexion</Link>
-</div>
-  );
+    </Navbar>
+  </div>
+);
 }
