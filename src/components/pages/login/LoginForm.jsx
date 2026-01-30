@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { MdNavigateNext } from "react-icons/md";
 import { theme } from "../../../index"; 
 import Logo from "../../reusable-ui/Logo";
-import Input from "../../reusable-ui/Input";
+import TextInput from "../../reusable-ui/TextInput";
 import { BsPersonCircle } from "react-icons/bs";
 
 export default function LoginForm() {
@@ -36,7 +36,7 @@ export default function LoginForm() {
 
         <h2 className="subtitle">Connectez-vous</h2>
 
-        <Input
+        <TextInput
           type="text"
           placeholder="Entrez votre Prénom..."
           value={inputValue}
