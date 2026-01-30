@@ -3,7 +3,9 @@
     "baseUrl": ".",
     "jsx": "react-jsx",
     "module": "ESNext",
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

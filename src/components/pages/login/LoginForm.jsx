@@ -1,37 +1,33 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { BsPersonCircle } from "react-icons/bs";
 import { MdNavigateNext } from "react-icons/md";
 import { theme } from "../../../index"; 
+import Logo from "../../reusable-ui/Logo";
+import Input from "../../reusable-ui/Input";
+import { BsPersonCircle } from "react-icons/bs";
 
 export default function LoginForm() {
   // states
-  const [username, setUsername] = useState("");
-  const Navigate = useNavigate();
+  const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
 
   // comportements
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (username) {
-      Navigate(`/order/${username}`)
-    }
+  const handleSubmit= (event) => {
+   event.preventDefault()
+   setInputValue("")
+   navigate(`order/${inputValue}`)
    
-    setUsername("");
   };
+
+  const handleChange= (event) => {
+    setInputValue(event.target.value)
+  }
 
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <div className="flex-container">
-        <h1>
-          CRAZEE{" "}
-          <img
-            className="logo-burger"
-            src="/images/f03-logo-orange.png"
-            alt="logo orange burger"
-          />{" "}
-          BURGER
-        </h1>
+        <Logo />
 
         <div className="welcome">
           <h2>Bienvenue chez nous!</h2>
@@ -40,16 +36,14 @@ export default function LoginForm() {
 
         <h2 className="subtitle">Connectez-vous</h2>
 
-        <div className="input-wrapper">
-          <BsPersonCircle className="icon" />
-          <input
-            type="text"
-            placeholder="Entrez votre Prénom..."
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
+        <Input
+          type="text"
+          placeholder="Entrez votre Prénom..."
+          value={inputValue}
+          onChange={handleChange}
+          required
+          Icon={<BsPersonCircle className="icon" />}
+        />
         <button type="submit">
           Accéder à mon espace
           <MdNavigateNext className="arrow" />
@@ -79,12 +73,7 @@ const LoginFormStyled = styled.form`
     line-height: 1;
   }
 
-  .logo-burger {
-    width: 140px;
-    height: 130px;
-    margin: 0 10px;
-  }
-
+ 
   .welcome {
     text-align: center;
     margin-bottom: 20px;
